@@ -1,17 +1,16 @@
-import { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { Box } from "@chakra-ui/react";
-// import Navbar from "../components/Navbar";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0);
+import Landing from "./pages/Landing";
 
-  // checking hot reload is working
-  var today = new Date().toLocaleString("en-US", { timeZone: "PST" });
-  console.log(today);
-  // it is!
-  return <h1>Hello World!</h1>;
+export default function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/">
+          <Landing />
+        </Route>
+      </Switch>
+    </Router>
+  );
 }
-
-export default App;
