@@ -10,16 +10,16 @@ Deployed Application: [Lifetracker Deployed Site](https://lifetracker-4life.surg
 
 - [ ] **The Nav Bar:** Implement customized views for users who are logged in vs not logged in.
   - [ ] If the user is logged in, it should display a **Sign Out** button. 
-  - [ ] If no user is logged in, it should display **Login** and **Register** buttons
+  - [x] If no user is logged in, it should display **Login** and **Register** buttons
   - [ ] Display a logo on the far left side, and contain links to the individual detailed activity page. 
-- [ ] **The Landing Page:** Display a large hero image and a brief blurb on what this application is about
-- [ ] **Login Page:** A form that allows users to login with email and password.
-- [ ] **Registration Page:** A form that allows the user to sign up with their email, password, username, first name, and last name.
+- [x] **The Landing Page:** Display a large hero image and a brief blurb on what this application is about
+- [x] **Login Page:** A form that allows users to login with email and password.
+- [x] **Registration Page:** A form that allows the user to sign up with their email, password, username, first name, and last name.
 - [ ] When a user first authenticates, they should be redirected to an authenticated view (i.e the detailed activity page). When they sign out, all frontend data should be reset.
 - [ ] Users have access to an overview Activity page that show one summary statistic about each of the 3 types of activity tracked.
 - [ ] The API should have a `security` middleware that only allows authenticated users to access resources and only allows users to access resources about themselves. 
 - [ ] Users should have the ability to track at least **1** types of activities (i.e Nutrition, Exercise, Sleep, etc.). Each activity should be tracked on separate pages.
-- [ ] Deployed website with Heroku & Surge. 
+- [x] Deployed website with Heroku & Surge. 
 
 **Detailed Activity Page:**
 - [ ] The detailed activity page should display a feed of all previous tracked activities.
