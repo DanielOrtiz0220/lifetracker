@@ -10,7 +10,7 @@ import { Container } from "@mui/material";
 import { Link } from "react-router-dom";
 import SportsGymnasticsIcon from "@mui/icons-material/SportsGymnastics";
 
-export default function Navbar() {
+export default function Navbar({ isLoggedIn, setIsLoggedIn, setIsClicked }) {
   return (
     <Container
       maxWidth="100vh"
@@ -20,7 +20,7 @@ export default function Navbar() {
       <AppBar position="fixed">
         <Toolbar>
           <Hero />
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, mr: 8 }}>
             Lifetracker by 4Life
           </Typography>
           <Button
