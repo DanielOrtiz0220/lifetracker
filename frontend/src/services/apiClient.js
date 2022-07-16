@@ -76,7 +76,7 @@ class ApiClient {
 
 // export default new ApiClient("https://lifetracker-4life-daniel.herokuapp.com");
 export default new ApiClient(
-  // "http://localhost:3001"
+  "http://localhost:3001"
 
-  process.env.REACT_APP_REMOTE_HOST_URL || "http://localhost:3001"
+  // process.env.REACT_APP_REMOTE_HOST_URL || "http://localhost:3001"
 );
