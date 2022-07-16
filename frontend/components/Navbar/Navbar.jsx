@@ -17,32 +17,60 @@ export default function Navbar({ isLoggedIn, setIsLoggedIn, setIsClicked }) {
       sx={{ borderBottom: "solid #E2E8F0 2px" }}
       disableGutters={true}
     >
-      <AppBar position="fixed">
-        <Toolbar>
-          <Hero />
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, mr: 8 }}>
-            Lifetracker by 4Life
-          </Typography>
-          <Button
-            component={Link}
-            to="/login"
-            variant="contained"
-            color="secondary"
-            sx={{ mr: 8 }}
-          >
-            Login
-          </Button>
-          <Button
-            component={Link}
-            to="/register"
-            variant="contained"
-            color="secondary"
-            sx={{ mr: 8 }}
-          >
-            Register
-          </Button>
-        </Toolbar>
-      </AppBar>
+      {isLoggedIn ? (
+        <AppBar position="fixed">
+          <Toolbar>
+            <Hero />
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, mr: 8 }}
+            >
+              Lifetracker by 4Life
+            </Typography>
+            <Button
+              component={Link}
+              to="/"
+              variant="contained"
+              color="secondary"
+              sx={{ mr: 8 }}
+            >
+              Logout
+            </Button>
+          </Toolbar>
+        </AppBar>
+      ) : (
+        <AppBar position="fixed">
+          <Toolbar>
+            <Hero />
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, mr: 8 }}
+            >
+              Lifetracker by 4Life
+            </Typography>
+            <Button
+              component={Link}
+              to="/login"
+              variant="contained"
+              color="secondary"
+              sx={{ mr: 8 }}
+            >
+              Login
+            </Button>
+            <Button
+              component={Link}
+              to="/register"
+              variant="contained"
+              color="secondary"
+              sx={{ mr: 8 }}
+            >
+              Register
+            </Button>
+          </Toolbar>
+        </AppBar>
+      )}
     </Container>
   );
 }

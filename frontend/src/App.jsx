@@ -15,6 +15,7 @@ import {
 
 import Login from "../components/Login/Login.jsx";
 import Register from "../components/Register/Register";
+import Activity from "../components/Activity/Activity";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -72,7 +73,20 @@ function App() {
                   />
                 }
               ></Route>
-              <Route path="/activity" element={<p />}></Route>
+              {/* <Route path="/activity" element={<p>Activities Page</p>}></Route> */}
+              <Route
+                path="/activity"
+                element={
+                  <Activity
+                    isClicked={isClicked}
+                    setIsClicked={setIsClicked}
+                    isLoggedIn={isLoggedIn}
+                    setIsLoggedIn={setIsLoggedIn}
+                    name={name}
+                    setName={setName}
+                  />
+                }
+              ></Route>
             </Routes>
           </main>
         </BrowserRouter>

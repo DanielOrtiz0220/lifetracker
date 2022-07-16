@@ -49,7 +49,7 @@ export default function Login(props) {
     }
 
     if (data?.user) {
-      props.setName(data.user.firstName);
+      props.setName(data.user.first_name);
 
       setIsLoading(false);
       props.setIsLoggedIn(true);

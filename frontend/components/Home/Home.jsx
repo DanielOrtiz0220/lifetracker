@@ -7,7 +7,18 @@ import { Container } from "@mui/material";
 import { Paper } from "@mui/material";
 import { CssBaseline } from "@mui/material";
 
-export default function Home({ isLoggedIn, setIsLoggedIn, setIsClicked }) {
+import { useEffect } from "react";
+
+export default function Home({
+  isLoggedIn,
+  setIsLoggedIn,
+  setIsClicked,
+  isClicked,
+}) {
+  useEffect(() => {
+    setIsLoggedIn(false);
+  });
+
   return (
     <Container maxWidth="xl">
       <Grid container>

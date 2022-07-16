@@ -93,8 +93,8 @@ export default function Register(props) {
     const { data, error } = await apiClient.signupUser({
       email: form.email,
       password: form.password,
-      firstName: form.firstName,
-      lastName: form.lastName,
+      first_name: form.firstName,
+      last_name: form.lastName,
       username: form.username,
     });
     if (error) {

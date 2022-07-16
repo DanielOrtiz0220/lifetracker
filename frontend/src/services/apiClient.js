@@ -4,7 +4,7 @@ class ApiClient {
   constructor(remoteHostUrl) {
     this.remoteHostUrl = remoteHostUrl;
     this.token = null;
-    this.tokenName = "lifestarter_token";
+    this.tokenName = "lifetracker_token";
   }
 
   setToken(token) {
@@ -63,6 +63,9 @@ class ApiClient {
   }
 
   async signupUser(credentials) {
+    console.log(
+      "sign up user in apiClient is reached, with credentials: " + credentials
+    );
     return await this.request({
       endpoint: `auth/register`,
       method: `POST`,
@@ -71,5 +74,9 @@ class ApiClient {
   }
 }
 
-export default new ApiClient("https://lifetracker-4life.herokuapp.com");
-//export default new ApiClient(process.env.REACT_APP_REMOTE_HOST_URL || "http://localhost:3001")
+// export default new ApiClient("https://lifetracker-4life-daniel.herokuapp.com");
+export default new ApiClient(
+  // "http://localhost:3001"
+
+  process.env.REACT_APP_REMOTE_HOST_URL || "http://localhost:3001"
+);
