@@ -4,13 +4,18 @@ const { PORT } = require("./config");
 const cors = require("cors");
 const morgan = require("morgan");
 const authRoute = require("./routes/auth.js");
+const nutritionRoute = require("./routes/nutrition.js");
 const { NotFoundError } = require("./utils/errors");
+const security = require("./middleware/security.js");
 
 app.use(cors());
 app.use(morgan("tiny"));
 app.use(express.json());
 
+app.use(security.extractUserFromJwt);
+
 app.use("/auth", authRoute);
+app.use("/nutrition", nutritionRoute);
 
 app.get("/", (req, res) => {
   res.send("Hola Familia!");

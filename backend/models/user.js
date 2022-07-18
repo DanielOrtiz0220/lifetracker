@@ -2,6 +2,8 @@ const { UnauthorizedError, BadRequestError } = require("../utils/errors");
 const bcrypt = require("bcrypt");
 const { BCRYPT_WORK_FACTOR } = require("../config");
 const db = require("../db");
+const jwt = require("jsonwebtoken")
+
 class User {
   static async makePublicUser(user) {
     return {
@@ -29,6 +31,7 @@ class User {
 
     if (user) {
       const isValid = await bcrypt.compare(credentials.password, user.password);
+
       if (isValid) {
         return User.makePublicUser(user);
       }
@@ -86,6 +89,7 @@ class User {
     );
     //return the user
     const user = result.rows[0];
+
     return User.makePublicUser(user);
   }
 
