@@ -2,6 +2,8 @@ import { Typography, Card, CardContent, Container, Grid } from "@mui/material";
 import React from "react";
 import Login from "../Login/Login";
 import Navbar from "../Navbar/Navbar";
+import apiClient from "../../src/services/apiClient";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function Activity({
   isLoggedIn,
@@ -38,7 +40,7 @@ export default function Activity({
               <Card
                 sx={{
                   boxShadow: 3,
-                  backgroundColor: "#FFCC00",
+                  backgroundColor: "#e5e5e5",
                   color: "black",
                 }}
               >
@@ -56,15 +58,15 @@ export default function Activity({
               <Card
                 sx={{
                   boxShadow: 3,
-                  backgroundColor: "#14213D",
-                  color: "white",
+                  backgroundColor: "#e5e5e5",
+                  color: "black",
                 }}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     Average Sleep Hours
                   </Typography>
-                  <Typography variant="" color="white">
+                  <Typography variant="" color="black">
                     0
                   </Typography>
                 </CardContent>
@@ -74,15 +76,15 @@ export default function Activity({
               <Card
                 sx={{
                   boxShadow: 3,
-                  backgroundColor: "#000016",
-                  color: "white",
+                  backgroundColor: "#e5e5e5",
+                  color: "black",
                 }}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     Average Daily Calories
                   </Typography>
-                  <Typography variant="" color="white">
+                  <Typography variant="" color="black">
                     0
                   </Typography>
                 </CardContent>
@@ -93,7 +95,7 @@ export default function Activity({
             variant="h4"
             align="left"
             sx={{
-              color: "black",
+              color: "white",
               top: 100,
               fontWeight: "bold",
               mb: 5,
@@ -125,15 +127,15 @@ export default function Activity({
               <Card
                 sx={{
                   boxShadow: 3,
-                  backgroundColor: "#c1292e",
-                  color: "white",
+                  backgroundColor: "#e5e5e5",
+                  color: "black",
                 }}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     Avg Exercise Intensity
                   </Typography>
-                  <Typography variant="" color="white">
+                  <Typography variant="" color="black">
                     0
                   </Typography>
                 </CardContent>
@@ -143,15 +145,15 @@ export default function Activity({
               <Card
                 sx={{
                   boxShadow: 3,
-                  backgroundColor: "#e85d04",
-                  color: "white",
+                  backgroundColor: "#e5e5e5",
+                  color: "black",
                 }}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     Total Hours Slept
                   </Typography>
-                  <Typography variant="" color="white">
+                  <Typography variant="" color="black">
                     0
                   </Typography>
                 </CardContent>

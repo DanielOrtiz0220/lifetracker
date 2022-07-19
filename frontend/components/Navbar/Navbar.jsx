@@ -30,6 +30,33 @@ export default function Navbar({ isLoggedIn, setIsLoggedIn, setIsClicked }) {
             </Typography>
             <Button
               component={Link}
+              to="/nutrition"
+              variant="contained"
+              color="secondary"
+              sx={{ mr: 8 }}
+            >
+              Nutrition
+            </Button>
+            <Button
+              component={Link}
+              to="/sleep"
+              variant="contained"
+              color="secondary"
+              sx={{ mr: 8 }}
+            >
+              Sleep
+            </Button>
+            <Button
+              component={Link}
+              to="/exercise"
+              variant="contained"
+              color="secondary"
+              sx={{ mr: 8 }}
+            >
+              Exercise
+            </Button>
+            <Button
+              component={Link}
               to="/"
               variant="contained"
               color="secondary"

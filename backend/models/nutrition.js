@@ -13,13 +13,15 @@ class Nutrition {
       created_at: nutrition.created_at,
     };
   }
-  static async listNutritions() {
+  static async getNutritions(userId) {
     const result = await db.query(
       `
-            SELECT * from nutrition;
-        `
+      SELECT * 
+      FROM nutrition
+      WHERE user_id = $1;
+      `,
+      [userId]
     );
-    console.log("result", result);
     return result.rows;
   }
   static async createNutrition({ nutrition: nutrition_details }) {
