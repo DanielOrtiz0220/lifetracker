@@ -2,7 +2,7 @@
 
 Submitted by: Daniel A. Ortiz
 
-Deployed Application: [Lifetracker Deployed Site](https://lifetracker-4life.surge.sh/)
+Deployed Application: [Lifetracker Deployed Site](https://daniel-lifetracker-4life.surge.sh/)
 
 ## Application Features
 
@@ -39,7 +39,7 @@ Implement any of the following features to improve the application:
 
 ### Walkthrough Video
 
-[Walkthrough](https://www.loom.com/share/3b016c7d23c34b54beaab12c5f32c27a)
+[Walkthrough](https://www.loom.com/share/819f9554be2444709b950f2966a55114)
 
 ### Reflection
 
